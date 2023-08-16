@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+/* botones */
+.boton {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.boton.boton_descubrir {
+    width: auto;
+    color: #333;
+    background-color: #d7d300;
+}
+
+.boton.boton-submit {
+    background-color: #00f690;
+    font-weight: 500;
+}
+
+/* tarjetas */
+.card {
+    /* height: 400px; */
+    width: 100%;
+    background-color: #f5f5f4;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .45);
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card_title {
+    padding: 0 10px;
+}
+
+.card .card_title h5 {
+    font-size: .85rem;
+    font-style: oblique;
+    text-transform: capitalize;
+}
+
+.card_title h4 {
+    font-size: 1.2rem;
+
+}
+
+.card .card_container {
+    width: 100%;
+    padding: 10px;
+    font-size: .80rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.card .card_container a.boton {
+    margin-top: 10px;
+    width: 110px;
+    align-self: flex-end;
+}
+
+/* navegacion */
+.navegacion {
+    background-color: rgb(253, 251, 251);
+    padding: 4px 10px;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.navegacion .logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.logo__container .logo {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 8px;
+    box-shadow: inset 2px 3px 4px rgba(0, 0, 0, 0.265);
+}
+
+.logo__container span {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.navegacion .navegacion__nav {
+    width: 50%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navegacion__nav .nav__item {
+    width: auto;
+    padding: 5px;
+}
+
+.nav__item.active {
+    border-bottom: 3px solid #ff6633;
+}
+
+.navegacion__nav .nav__item a {
+    color: initial;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navegacion__nav .nav__item a i {
+    font-size: 1.4rem;
+    margin-right: 4px;
+}
+
+/* mobile */
+.navegacion label {
+    display: none;
+}
+
+.navegacion #check__menu {
+    display: none;
+}
+
+label i {
+    font-size: 2rem;
+
+}
+
+
+
+/* Header */
+.header__container {
+    position: relative;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 91vh;
+}
+
+.header__container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.capa {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    mix-blend-mode: overlay;
+}
+
+/* form */
+.form_container, .container__titles {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    padding: 10px;
+    width: 35%;
+    height: 70%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 102, 51, 0.85);
+    border-radius: 3px 0 0 3px;
+    color: #fdfdfd;
+}
+
+.form_container .form__control {
+    padding: 12px 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form__control input, .form__control select {
+    height: 30px;
+    outline: none;
+    padding: 1px 3px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+}
+
+.form__control select {
+    text-align: center;
+}
+
+.form__control input[type=text] {
+    width: 100%;
+}
+
+.form__control label {
+    font-size: .875rem;
+    display: block;
+}
+
+.form__control div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 30px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form__control div label {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form__control.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+form .info {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.container__titles {
+    width: 55%;
+    background-color: rgba(36, 35, 35, 0.45);
+    left: 40%;
+    border-radius: 0 3px 3px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #fdfdfd;
+    text-align: center;
+}
+
+.container__titles h2 {
+    font-family: 'Kaushan Script', cursive;
+    color: #33ccff;
+    font-size: 6.5rem;
+    font-weight: 600;
+    -webkit-text-stroke: 1.5px white;
+}
+
+.container__titles h4 {
+    font-weight: 500;
+    font-size: 2rem;
+
+}
+
+.container__titles p {
+    font-size: 1rem;
+    width: 60%;
+}
+
+/* Seccion empresa */
+.empresa {
+    width: 100%;
+    height: 450px;
+    margin-top: 60px;
+    padding: 1rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.empresa__description, .medios_description {
+    width: 50%;
+    height: 85%;
+    padding: 1rem;
+    background-color: rgb(252, 246, 246);
+    border-radius: 12px 0 0 12px;
+}
+
+.image__description {
+    width: 50%;
+    height: 380px;
+    border-radius: 12px;
+    background-image: url(../assets/img/travels/galeria1.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: galeria 30s infinite;
+}
+
+/* .image__description img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+} */
+
+.empresa .empresa__description h1 {
+    letter-spacing: 1px;
+    font-size: 2.35rem;
+}
+
+.empresa .empresa__description h1 img {
+    margin-right: 2px;
+    width: 1.5rem;
+}
+
+.empresa .empresa__description p {
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-size: .875rem;
+}
+
+/* Seccion destinos, explora, medios */
+.destinos, .explora, .medios_pago {
+    padding: 1.5rem 4%;
+    width: 100%;
+    background-color: #33ccff;
+}
+
+.destinos h2, .explora h2 {
+    height: 70px;
+    text-align: center;
+}
+
+.destinos_container {
+    width: 100%;
+    padding: 1rem 4%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Explora */
+.explora {
+    background-color: #f5f5f4;
+}
+
+.explora__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.explora__container .card_explora {
+    width: 220px;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card_explora img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .85;
+}
+
+.card_explora p {
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fdfdfd;
+    text-shadow: 1.5px 1.5px 2px #000;
+    font-size: 1.5rem;
+}
+
+/* medios de pago */
+.medios_pago {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.medios_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.medios_description h2 {
+    font-weight: 400;
+}
+
+.medios_pago .brands_container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.medios_pago .brands_container img {
+    width: 60px;
+    height: 35px;
+}
+
+.medios_pago .medios_image {
+    width: 50%;
+}
+
+.medios_image img {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+}
+
+section.pie_pagina {
+    padding: 1rem 7%;
+    background-color: #222;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    color: #fdfdfd;
+
+}
+
+.pie_pagina h2 {
+    font-size: 1.4rem;
+}
+
+.pie_pagina .links h2 img {
+    margin: 0 2px;
+    width: 0.95rem;
+
+}
+
+.pie_pagina ul, .pie_pagina form {
+    padding: 10px 0;
+    width: 250px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pie_pagina form {
+    width: 90%;
+    height: auto;
+}
+
+.pie_pagina form input, .pie_pagina form button.boton {
+    padding: 2px;
+    height: 35px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.pie_pagina form button.boton.boton_news {
+    width: 40%;
+    align-self: end;
+    background-color: #ff6633;
+    margin-top: 5px;
+    padding: 2px 5px;
+    color: #fdfdfd;
+}
+
+
+.pie_pagina .contacto ul {
+    height: 100px;
+
+}
+
+.pie_pagina ul .link_item a {
+    color: #fdfdfd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.link_item a i.bx {
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+
+.credits {
+    border-top: 2px solid #f5f5f4;
+    padding: 1rem 7%;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.credits .container__logo {
+    width: 20px;
+    height: 100%;
+    transition: width .85s ease;
+    overflow: hidden;
+}
+
+.credits .container__logo:hover {
+    width: 300px;
+}
+
+.credits .container__logo img {
+    height: 25px;
+}
+
+.credits span {
+    color: #f5f5f4;
+}
+
+/* Animaciones */
+
+@keyframes galeria {
+    0%, 100% {
+        background-image: url(../assets/img/travels/galeria1.jpg);
+    }
+
+    12.5% {
+        background-image: url(../assets/img/travels/galeria2.jpg);
+    }
+
+    25% {
+        background-image: url(../assets/img/travels/galeria3.jpg);
+    }
+
+    37.5% {
+        background-image: url(../assets/img/travels/galeria4.jpg);
+    }
+
+    50% {
+        background-image: url(../assets/img/travels/galeria5.jpg);
+    }
+
+    62.5% {
+        background-image: url(../assets/img/travels/galeria6.jpg);
+    }
+
+    75% {
+        background-image: url(../assets/img/travels/galeria7.jpg);
+    }
+
+    87.5% {
+        background-image: url(../assets/img/travels/galeria8.jpg);
+    }
+}
+
+/* media queries */
+@media screen and (max-width:960px) {
+
+    .navegacion .navegacion__nav {
+        width: 70%;
+    }
+
+    .navegacion .logo__container span {
+        font-size: 1.4rem;
+    }
+
+    .container__titles {
+        height: 545px;
+    }
+
+    .container__titles h2 {
+        font-size: 5.5rem;
+    }
+
+    .form_container {
+        height: auto;
+    }
+
+    .form__control.row {
+        flex-direction: column;
+    }
+
+    .medios_pago {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .medios_description {
+        width: 100%;
+        border-radius: 12px;
+        order: 2;
+    }
+
+    .medios_pago .medios_image {
+        margin-top: 1rem;
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navegacion .navegacion__nav {
+        display: none;
+    }
+
+    .navegacion label {
+        display: flex;
+    }
+
+    .navegacion #check__menu:checked~.navegacion__nav {
+        background: hwb(15 20% 0% / 0.85);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .navegacion__nav .nav__item a {
+        margin-top: 40px;
+        color: #fdfdfd;
+    }
+
+    .form_container {
+        width: 90%;
+        height: auto;
+        border-radius: 3px;
+    }
+
+    .form__control.row {
+        flex-direction: column;
+    }
+
+    .container__titles {
+        display: none;
+    }
+
+    .empresa__description {
+        width: 70%;
+    }
+
+    .destinos_container {
+        grid-template-columns: repeat(2, 2fr);
+
+    }
+
+    .explora__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .card_explora {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .medios_image img {
+        width: 100%;
+    }
+
+    .pie_pagina ul, .pie_pagina form {
+        width: 100%;
+    }
+
+    .pie_pagina form {
+        flex-direction: row;
+    }
+
+    .pie_pagina form button.boton.boton_news {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .explora__container {
+        grid-template-columns: 1fr;
+    }
+
+    .empresa__description, .medios_description {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .image__description, .medios_image {
+        display: none;
+    }
+
+    .destinos_container {
+        grid-template-columns: 1fr;
+    }
+
+
+    section.pie_pagina {
+        height: 90%;
+        flex-direction: column;
+    }
+
+    .credits {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Simil hover */
+    .credits .container__logo:active {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:420px) {
+
+    .explora__container {
+        grid-template-columns: 1fr;
+    }
+}
